@@ -50,7 +50,7 @@ import rosegraphics as rg
 #     TurtleWindow is in the   rg  (shorthand for rosegraphics) module.
 # ----------------------------------------------------------------------
 window = rg.TurtleWindow()
-window.delay(20)  # Bigger numbers mean slower animation.
+window.delay(10)  # Bigger numbers mean slower animation.
 
 # ----------------------------------------------------------------------
 # Makes (constructs) a   SimpleTurtle   object.
@@ -97,7 +97,7 @@ dave.forward(270)
 
 ########################################################################
 #
-# TODO: 4.
+# DONE: 4.
 #   The code above  CONSTRUCTS  two SimpleTurtle objects and gives those objects NAMES:
 #       dave    matt
 #
@@ -116,9 +116,19 @@ dave.forward(270)
 #
 ########################################################################
 
+jack = rg.SimpleTurtle()
+jack.pen = rg.Pen('blue', 15)
+jack.speed = 15
+jack.right(30)
+jack.forward(50)
+jack.left(60)
+jack.backward(50)
+jack.left(60)
+jack.forward(50)
+
 ########################################################################
 #
-# TODO: 5.
+# DONE: 5.
 #   Run one more time to be sure that all is still OK.
 #   Ensure that no blue bars on the scrollbar-thing to the right remain.
 #
