@@ -2,10 +2,10 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Jack Marshall.
 """
 ########################################################################
-# TODO: 1.
+# DONE: 1.
 # On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ########################################################################
 
@@ -28,3 +28,39 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #
 #  Don't forget to COMMIT your work by using  VCS ~ Commit and Push.
 ########################################################################
+
+import rosegraphics as rg
+
+window = rg.TurtleWindow()
+
+turtle = rg.SimpleTurtle('turtle')
+turtle.pen = rg.Pen('blue', 10)
+turtle.speed = 10
+
+size = 150
+
+for k in range(10):
+    turtle.draw_circle(size)
+    turtle.pen_up()
+    turtle.left(50)
+    turtle.forward(50)
+    turtle.pen_down()
+
+    size = size - 15
+
+arrow = rg.SimpleTurtle()
+arrow.pen = rg.Pen('red', 5)
+arrow.speed = 10
+
+size = 15
+
+for k in range(10):
+    arrow.draw_regular_polygon(3,size)
+    arrow.pen_up()
+    arrow.right(25)
+    arrow.backward(25)
+    arrow.pen_down()
+
+    size = size + 10
+
+window.close_on_mouse_click()
